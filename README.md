@@ -2,11 +2,11 @@
 
 This project aims to build a Semantic Movie &amp; People Search Engine that
 allows users to search for movies, actors, or directors using natural language
-queries. The system will integrate PostgreSQL with pgvector for vector
-storage, use Ollama for local embedding generation and LLM responses, and
-be deployed through Streamlit. Users will be able to perform semantic
-search, apply filters like genre, rating, and year, and receive natural
-language recommendations.
+queries.The system integrates PostgreSQL with the pgvector extension for vector 
+storage and similarity search, utilizes Hugging Face's Sentence Transformer for 
+generating embeddings, and employs the free version of OpenAI for language model 
+responses. The entire application is deployed using Streamlit to provide an interactive
+user interface. 
 
 # Motivation
 I chose this project because it offers an opportunity to combine data
@@ -16,11 +16,7 @@ solution. Semantic search and retrieval-augmented generation (RAG)
 systems are becoming critical in modern AI applications. By building an end-
 to-end semantic search and RAG pipeline, this project will enhance my skills
 specifically in RAG workflows, which is an emerging and valuable area in
-real-world AI development. Additionally, the knowledge and hands-on
-experience gained through this capstone will help me develop more proof-of-
-concept (POC) projects quickly and effectively in my current job role,
-especially for tasks involving building intelligent search systems, contextual
-assistants, or AI-based query engines.
+real-world AI development. 
 
 # Data Question
 How can we build a system that allows users to find movies or
@@ -33,12 +29,10 @@ structured database information?
 title.ratings.tsv.gz, and title.principals.tsv.gz.
 2. Store structured movie and people data in PostgreSQL using pgvector
 for embeddings.
-3. Generate semantic embeddings locally using Ollama.
+3. Generate semantic embeddings using Hugging Face's Sentence Transformer.
 4. Allow users to semantically search for movies or actors via a Streamlit
 frontend.
-
-5. Use filters: Genre, IMDb Rating, Year. (Optional - Nice to have)
-6. Pass results context to Ollama LLM to generate clean, human-readable
+5. Pass results context to free version of OpenAI LLM to generate clean, human-readable
 answers.
 
 # Data Sources
@@ -54,5 +48,6 @@ https://datasets.imdbws.com/
 5. title.crew.tsv.gz (moview crew members)
 
 **Technology Sources**
-1. Ollama (for free local LLM models)
+1. Free OPEN AI via openrouter.ai (for free LLM models)
 2. pgvector (for vector embeddings in PostgreSQL)
+3. Hugging Face's Sentence Transformer
